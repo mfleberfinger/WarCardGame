@@ -21,3 +21,9 @@ Playing the graphical version of the game:
   - The number of cards in each deck is shown over the decks in the corners of the window.
   - Click "Reset" to start a new game.
   
+
+
+
+
+Art Credit:
+The images used for the card faces in this game were created by Byron Knoll and are available as .png and .svg files at http://byronknoll.blogspot.com/2011/03/vector-playing-cards.html. 
