@@ -1,0 +1,53 @@
+﻿<Window x:Class="DeacomWarVisual.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DeacomWarVisual"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="850" ResizeMode="NoResize"
+        Background="ForestGreen">
+
+    <Grid x:Name="CardGrid" Width="800" Height="600">
+        <Image x:Name="deckImage1" Source="Card_Back.png" 
+               HorizontalAlignment="Left" Height="133"
+               VerticalAlignment="Top" Width="92" Margin="708,467,0,0" />
+        <Label x:Name="countLabel1" HorizontalAlignment="Right"
+               FontSize="40" Foreground="White"
+               Margin="0,0,18,32" VerticalAlignment="Bottom" Content="c1" 
+               HorizontalContentAlignment="Center" />
+        <Image x:Name="deckImage2" Source="Card_Back.png" 
+               HorizontalAlignment="Left" Height="133"
+               VerticalAlignment="Top" Width="92" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="countLabel2" HorizontalAlignment="Left"
+               FontSize="40" Foreground="White"
+               Margin="18,32,0,0" VerticalAlignment="Top" Content="c2" 
+               HorizontalContentAlignment="Center" />
+        <Button Content="Reset" HorizontalAlignment="Right" 
+                Margin="0,0,0,0" VerticalAlignment="Top"
+                Width="175" Height="55" FontSize="40" 
+                Click="ResetClicked" />
+        <Button Content="Next" HorizontalAlignment="Right" 
+                Margin="0,60,0,0" VerticalAlignment="Top"
+                Width="175" Height="100" FontSize="40" 
+                Click="NextClicked" x:Name="NextButton" />
+        <Label x:Name="WinLabel" HorizontalAlignment="Center"
+               VerticalAlignment="Top" Content="You Win!"
+               FontSize="100" Foreground="White" Visibility="Hidden" />
+        <Label x:Name="LoseLabel" HorizontalAlignment="Center"
+            VerticalAlignment="Top" Content="You Lose!"
+            FontSize="100" Foreground="White" Visibility="Hidden" />
+        <Label x:Name="TieLabel" HorizontalAlignment="Center"
+            VerticalAlignment="Top" Content="Tie!"
+            FontSize="100" Foreground="White" Visibility="Hidden" />
+    </Grid>
+</Window>
